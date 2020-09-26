@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Reporte de Ventas</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container pt-4">
+      <hr>
+      <h1 class="font-weight-normal h4 text-center">Reporte de ventas</h1>
+      <hr>
+
+      <form method="POST">
+        <div class="form-group row">
+          <label for="inpSalida" class="col-sm-3 col-form-label">Salida (Punto de Partida):</label>
+          <div class="col-sm-9">
+            <input type="text" name="inpSalida" id="inpSalida" class="form-control form-control-sm" required autocomplete="off">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="inpDestino" class="col-sm-3 col-form-label">Destino:</label>
+          <div class="col-sm-9">
+            <input type="text" name="inpDestino" id="inpDestino" class="form-control form-control-sm" required autocomplete="off">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="inpTipoDeViaje" class="col-sm-3 col-form-label">Tipo de Viaje:</label>
+          <div class="col-sm-9">
+            <select name="inpTipoDeViaje" id="inpTipoDeViaje" class="form-control form-control-sm" required>
+              <option value="">Seleccione una opci&oacute;n</option>
+              <option value="reportaje">Reportaje</option>
+              <option value="analista">Analista</option>
+              <option value="reunion">Reunion</option>
+              <option value="venta">Venta</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="inpFechaDeViaje" class="col-sm-3 col-form-label">Fecha de Viaje:</label>
+          <div class="col-sm-9">
+            <input type="text" name="inpFechaDeViaje" id="inpFechaDeViaje" class="form-control form-control-sm" required autocomplete="off">
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" onclick="downloadPDF();">Generar PDF</button>
+      </form>
+    </div>
+
+
+    <!-- JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="vendor/jsPDF/dist/jspdf.min.js"></script>
+    <script src="js/pdf.js"></script>
+  </body>
+</html>
