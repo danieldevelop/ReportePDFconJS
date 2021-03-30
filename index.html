@@ -9,28 +9,28 @@
   <body>
     <div class="container pt-4">
       <hr>
-      <h1 class="font-weight-normal h4 text-center">Reporte de ventas</h1>
+      <h1 class="font-weight-normal h4 text-center">Reporte de vuelos</h1>
       <hr>
 
       <form method="POST">
         <div class="form-group row">
           <label for="inpSalida" class="col-sm-3 col-form-label">Salida (Punto de Partida):</label>
           <div class="col-sm-9">
-            <input type="text" name="inpSalida" id="inpSalida" class="form-control form-control-sm" required autocomplete="off">
+            <input type="text" name="inpSalida" id="inpSalida" class="form-control form-control-sm" autocomplete="off">
           </div>
         </div>
 
         <div class="form-group row">
           <label for="inpDestino" class="col-sm-3 col-form-label">Destino:</label>
           <div class="col-sm-9">
-            <input type="text" name="inpDestino" id="inpDestino" class="form-control form-control-sm" required autocomplete="off">
+            <input type="text" name="inpDestino" id="inpDestino" class="form-control form-control-sm" autocomplete="off">
           </div>
         </div>
 
         <div class="form-group row">
           <label for="inpTipoDeViaje" class="col-sm-3 col-form-label">Tipo de Viaje:</label>
           <div class="col-sm-9">
-            <select name="inpTipoDeViaje" id="inpTipoDeViaje" class="form-control form-control-sm" required>
+            <select name="inpTipoDeViaje" id="inpTipoDeViaje" class="form-control form-control-sm" onchange="ShowSelected();">
               <option value="">Seleccione una opci&oacute;n</option>
               <option value="reportaje">Reportaje</option>
               <option value="analista">Analista</option>
@@ -43,11 +43,11 @@
         <div class="form-group row">
           <label for="inpFechaDeViaje" class="col-sm-3 col-form-label">Fecha de Viaje:</label>
           <div class="col-sm-9">
-            <input type="text" name="inpFechaDeViaje" id="inpFechaDeViaje" class="form-control form-control-sm" required autocomplete="off">
+            <input type="date" name="inpFechaDeViaje" id="inpFechaDeViaje" class="form-control form-control-sm" autocomplete="off">
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-block" onclick="downloadPDF();">Generar PDF</button>
+        <button type="button" class="btn btn-primary btn-block" id="btnGenerarPDF">Generar PDF</button>
       </form>
     </div>
 
